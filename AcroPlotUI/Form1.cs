@@ -243,7 +243,7 @@ namespace AcroPlotUI
             }
         }
 
-        private async void Form1_DragDrop(object sender, DragEventArgs e)
+        private void Form1_DragDrop(object sender, DragEventArgs e)
         {
             List<string> droppedFiles = new List<string>();
             string[] items = e.Data.GetData(DataFormats.FileDrop) as string[];
@@ -260,38 +260,34 @@ namespace AcroPlotUI
                 }
             }
 
-            List<PdfFile> pdfFiles = await this.CheckFilesAsync(droppedFiles);
+            List<PdfFile> pdfFiles = this.CheckFiles(droppedFiles);
             this.UpdateUIFileList(pdfFiles);
         }
 
-        private Task<List<PdfFile>> CheckFilesAsync(List<string> files)
+        private List<PdfFile> CheckFiles(List<string> files)
         {
-            return Task.Run<List<PdfFile>>(() =>
+            List<PdfFile> pdfFiles = new List<PdfFile>();
+            for (int i = 0; i < files.Count; i++)
+            {
+                this.lblStatus.Text = string.Format("Checking files ({0}/{1})", i + 1, files.Count);
+                this.statusStrip1.Refresh();
+                try
                 {
-                    List<PdfFile> pdfFiles = new List<PdfFile>();
-                    for (int i = 0; i < files.Count; i++)
+                    var pdf = new PdfFile(files[i], string.Empty);
+                    pdfFiles.Add(pdf);
+                }
+                catch (Exception ex)
+                {
+                    var dr = MessageBox.Show(this, ex.Message + "\n\n" + files[i], "Could not open the file", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    if (dr == DialogResult.Cancel)
                     {
-                        this.statusStrip1.InvokeIfRequired(delegate
-                        {
-                            this.lblStatus.Text = string.Format("Checking files ({0}/{1})", i + 1, files.Count);
-                            this.statusStrip1.Refresh();
-                        });
-                        try
-                        {
-                            PdfFile pdf = new PdfFile(files[i], string.Empty);
-                            pdfFiles.Add(pdf);
-                        }
-                        catch (Exception ex)
-                        {
-                            Debug.Print("Exception ({0}) {1}", files[i], ex.Message);
-                        }
+                        break;
                     }
-                    this.statusStrip1.InvokeIfRequired(delegate
-                    {
-                        this.lblStatus.Text = string.Empty;
-                    });
-                    return pdfFiles;
-                });
+                }
+            }
+
+            this.lblStatus.Text = string.Empty;
+            return pdfFiles;
         }
 
         private void UpdateUIFileList(List<PdfFile> pdfFiles)

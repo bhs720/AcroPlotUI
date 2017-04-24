@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblQueue = new System.Windows.Forms.ToolStripStatusLabel();
@@ -129,7 +130,7 @@
             // lblStatus
             // 
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(304, 17);
+            this.lblStatus.Size = new System.Drawing.Size(308, 17);
             this.lblStatus.Spring = true;
             this.lblStatus.Text = "Checking Files";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,7 +140,7 @@
             this.lblQueue.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.lblQueue.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.lblQueue.Name = "lblQueue";
-            this.lblQueue.Size = new System.Drawing.Size(304, 17);
+            this.lblQueue.Size = new System.Drawing.Size(308, 17);
             this.lblQueue.Spring = true;
             this.lblQueue.Text = "Queue";
             this.lblQueue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -400,7 +401,7 @@
             this.tabJobSetup.Location = new System.Drawing.Point(4, 28);
             this.tabJobSetup.Margin = new System.Windows.Forms.Padding(0);
             this.tabJobSetup.Name = "tabJobSetup";
-            this.tabJobSetup.Size = new System.Drawing.Size(616, 388);
+            this.tabJobSetup.Size = new System.Drawing.Size(623, 388);
             this.tabJobSetup.TabIndex = 0;
             this.tabJobSetup.Text = "Job Setup";
             this.tabJobSetup.UseVisualStyleBackColor = true;
@@ -440,7 +441,7 @@
             this.tabQueue.Location = new System.Drawing.Point(4, 28);
             this.tabQueue.Margin = new System.Windows.Forms.Padding(0);
             this.tabQueue.Name = "tabQueue";
-            this.tabQueue.Size = new System.Drawing.Size(616, 388);
+            this.tabQueue.Size = new System.Drawing.Size(623, 388);
             this.tabQueue.TabIndex = 1;
             this.tabQueue.Text = "Queue";
             this.tabQueue.UseVisualStyleBackColor = true;
@@ -765,14 +766,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridQueue.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridQueue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridQueue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridQueue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridQueue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.QueuePath,
@@ -780,26 +781,26 @@
             this.QueuePageNum,
             this.QueueJobStatus,
             this.QueueJobTime});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridQueue.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridQueue.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridQueue.Location = new System.Drawing.Point(0, 51);
             this.gridQueue.Margin = new System.Windows.Forms.Padding(0);
             this.gridQueue.Name = "gridQueue";
             this.gridQueue.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridQueue.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridQueue.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridQueue.RowHeadersVisible = false;
             this.gridQueue.RowTemplate.Height = 18;
             this.gridQueue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -851,6 +852,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "Form1";
             this.Text = "AcroPlot UI";
